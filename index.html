@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge base</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/choices.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+
+    <noscript>
+        <style>
+            .simplebar-content-wrapper {
+                overflow: auto;
+            }
+        </style>
+    </noscript>
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Чекбокс -->
+        <div class="categories">
+            <p class="categories-title">Категории:</p>
+            <label for="check1" class="checkbox">
+                <input type="checkbox" name="check1" id="check1" class="check">Динозавры
+                <span></span>
+            </label>
+
+            <label for="check2" class="checkbox">
+                <input type="checkbox" name="check2" id="check2" class="check">Медведи
+                <span></span>
+            </label>
+
+            <label for="check3" class="checkbox">
+                <input type="checkbox" name="check3" id="check3" class="check">Косули
+                <span></span>
+            </label>
+
+            <label for="check4" class="checkbox">
+
+                <input type="checkbox" name="check4" id="check4" class="check">Лисы
+                <span></span>
+            </label>
+
+            <label for="check5" class="checkbox">
+
+                <input type="checkbox" name="check5" id="check5" class="check">Волки
+                <span></span>
+            </label>
+
+            <label for="check6" class="checkbox">
+
+                <input type="checkbox" name="check6" id="check6" class="check">Олени и лоси
+                <span></span>
+            </label>
+        </div>
+
+
+        <!-- Селект -->
+        <select name="material" id="material">
+            <option value="">Материал</option>
+            <option value="Древесина">Древесина</option>
+            <option value="Металл">Металл</option>
+            <option value="Камень">Камень</option>
+            <option value="Пластик">Пластик</option>
+            <option value="Композитный">Композитный</option>
+            <option value="Гипс">Гипс</option>
+        </select>
+
+        <!-- Карта -->
+        <div class="my-map">
+            <p class="address">В качестве адреса для маркера используйте: Франция, Иль-де-Франс, Париж, X округ Парижа,
+                улица дю Фобур Сен Дени 54</p>
+            <div id="map" class="map"></div>
+        </div>
+
+
+        <!-- Скроллбар -->
+        <div class="custom-scroll" data-simplebar>
+            Сложно сказать, почему многие известные личности представлены в исключительно положительном свете. Лишь
+            активно развивающиеся страны третьего мира будут объективно рассмотрены соответствующими инстанциями. Мы
+            вынуждены отталкиваться от того, что высокотехнологичная концепция общественного уклада представляет собой
+            интересный эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая
+            примерно следующее: непосредственные участники технического прогресса освещают чрезвычайно интересные
+            особенности картины в целом, однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем
+            настолько очевидна, что социально-экономическое развитие, а также свежий взгляд на привычные вещи -
+            безусловно открывает новые горизонты для первоочередных требований.
+        </div>
+
+
+        <!-- Тултипы -->
+
+        <div class="tooltip-block">
+            Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления
+            внешнеэкономических политик.
+            <div class="tooltip">
+                <svg class="marker" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="tooltip-svg" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 3C7.33333 3 7 3.31919 7 3.95758C7 4.60026 7.33333 4.92159 8 4.92159C8.33333 4.92159 8.58233 4.83805 8.74699 4.67095C8.91566 4.49957 9 4.26178 9 3.95758C9 3.31919 8.66667 3 8 3ZM7.07831 13H8.91566V5.81491H7.07831V13Z"
+                        fill="#BCBCBC" />
+                </svg>
+                <div class="popup">
+                    Глава 2, страница 176
+                </div>
+                <div class="popup-arrow"></div>
+            </div>
+
+        </div>
+
+        <!-- Форма -->
+        <form action class="form">
+            <input class="input" name="name" type="text" data-validate-field="name" placeholder="Имя*">
+            <input class="input" name="tel" type="tel" data-validate-field="tel" placeholder="Телефон*">
+            <input class="input" name="email" type="email" data-validate-field="email" placeholder="E-mail*">
+            <button class="btn">Заказать</button>
+        </form>
+
+    </div>
+    <script src="js/inputmask.min.js"></script>
+    <script src="js/just-validate.min.js"></script>
+    <script src="js/choices.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
