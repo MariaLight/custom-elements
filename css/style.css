@@ -276,16 +276,20 @@ p {
     border-radius: 10px;
     padding: 38px 30px;
 }
-
+.input-box {
+    display: flex;
+    flex-direction: column-reverse;
+}
 .input {
     padding: 24px 20px;
     border-radius: 10px;
     border: 1px solid #fff;
     margin-bottom: 31px;
+    width: 100%;
 }
 .input:focus {
     outline: none;
-     border: 1px solid var(--form);
+    border: 1px solid var(--form);
 }
 
 .input::placeholder {
@@ -302,6 +306,10 @@ p {
     line-height: 23px;
     color: #fff;
     border-radius: 10px;
+}
+
+.btn:focus {
+    outline: none;
 }
 
 .js-validate-error-label {
